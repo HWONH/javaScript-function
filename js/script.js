@@ -113,3 +113,16 @@ function selfTest(){ // 2.
     selfTest(); // 6. 다시 함수 호출(본인 호출)
 }
 selfTest(); // 1. 함수문을 최초로 호출
+/* ---------------------------------------------------- */
+document.write("<hr>");
+var $arr_tree=["tree-1-thumb.jpg", "tree-2-thumb.jpg", "tree-3-thumb.jpg", "tree-4-thumb.jpg", "tree-5-thumb.jpg", "tree-6-thumb.jpg"];
+var $n=0;
+function treeImg(){
+    document.write("<img src='img/"+$arr_tree[$n]+"'>");
+    $n++;
+    if($n>=$arr_tree.length){ // 0,1,2,3,4,5
+        return;
+    }
+    treeImg();
+}
+treeImg();
