@@ -40,3 +40,20 @@ function changeBg(){
         ch_num=0;
     } 
 }
+/* ---------------------------------------------------- */
+// fnc(매개변수) => 외부의 데이터 값을 전달받아서 변수로 활용하겠다는 함수구문 내부의 변수 지칭
+function fnc(name, region){ 
+    // 2. var name="홍길동", var region="서울" 5. var name="김수현", region="부산"
+    console.log(name);
+    console.log(region);
+    document.write("저의 이름은 "+name+"이며 사는 곳은 "+region+"입니다","<br>");
+    // 3. 출력&실행
+}
+fnc("홍길동", "서울"); // 1. 함수 호출
+fnc("김수현", "부산"); // 4. 다시 함수 호출
+
+function ch_img($img, $txt){
+    document.write("<img src='img/"+$img+"' alt="+$txt+">");
+}
+ch_img("ace.png", "앞면");
+ch_img("card.png", "뒷면");
