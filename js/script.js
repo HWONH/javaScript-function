@@ -134,3 +134,14 @@ treeImg();
 // 즉시 실행 함수의 특징
 // 1. 호출명이 없기 때문에 메모리값을 차지할 것이 없음(속도가 빠름)
 // 2. 함수호출에 의한 함수문과는 달리 강제적으로 실행
+/* ---------------------------------------------------- */
+// 전역변수와 지역변수를 활용한 이미지 보여주기
+var $global=document.getElementById("global_img"); // 전역변수
+var $local=document.getElementById("local_img"); // 지역변수
+var $arr_img=["tree-1.jpg", "tree-2.jpg", "tree-3.jpg"];
+$global.innerHTML="<img src='img/"+$arr_img[0]+"'>"; // 전역변수 $arr_img
+function ch_img02(){
+    var $arr_img=["tree-1-thumb.jpg", "tree-2-thumb.jpg", "tree-3-thumb.jpg"];
+    $local.innerHTML="<img src='img/"+$arr_img[0]+"'><img src='img/"+$arr_img[1]+"'><img src='img/"+$arr_img[2]+"'>";
+}
+ch_img02();
