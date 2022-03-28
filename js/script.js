@@ -74,3 +74,30 @@ calc_01();
 console.log($num); // 400
 /* var final_num=calc_01(); // 1. 함수문 호출 5. final_num = return문에 의해 돌려받은 데이터 값을 최종 전역 변수에 저장
 document.write(final_num, "<br>"); // 300
+ *//* ---------------------------------------------------- */
+// return문을 통한 한장의 이미지 출력
+function importImg($img){ // 2. 매개변수 $img = "<img src='img/tree-1.jpg'>"
+    var $rstImg=$img; // 3. $rstImg(지역 변수)에 $img(매개변수)의 데이터 값 대입
+    return $rstImg; // 4. 데이터 값을 돌려준다
+}
+var $final_img=importImg("<img src='img/tree-1.jpg'>"); // 1. 함수 호출 6. 돌려받은 데이터 값을 최종 전역 변수에 저장
+document.write($final_img); // 7. 출력
+document.write("<div></div>");
+/* ---------------------------------------------------- */
+// return문을 통한 여러장의 이미지 출력
+function importPic($pic1, $pic2, $pic3){
+    var $rstPic=$pic1+$pic2+$pic3;
+    return $rstPic;
+}
+var $final_pic=importPic("<img src='img/tree-1-thumb.jpg'>", "<img src='img/tree-2-thumb.jpg'>", "<img src='img/tree-3-thumb.jpg'>");
+document.write($final_pic);
+document.write("<div></div>");
+/* ---------------------------------------------------- */
+// return문 : 함수구문 내부에서 진행을 중단시키고 더 이상 진행하지 않도록 함수구문으로부터 빠져나오는 역할(break문과 동일한 역할)
+function testTxt($name, $region){
+    document.write("성명 : "+$name, "<br>");
+    return;
+    document.write("지역 : "+$region, "<br>");
+}
+testTxt("문강태", "성진시 저주받은 성");
+testTxt("고문영", "성진시 주리네");
