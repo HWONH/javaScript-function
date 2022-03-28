@@ -57,3 +57,10 @@ function ch_img($img, $txt){
 }
 ch_img("ace.png", "앞면");
 ch_img("card.png", "뒷면");
+/* ---------------------------------------------------- */
+// 내장함수란, 자바스크립트 코드 내부에서 이미 지정된 용어를 사용함으로써 각 기능을 적용하여 활용하기 위한 도구
+var $question_num=isNaN("6-3");
+console.log($question_num) // true
+// eval() 내장함수;결합할 수 없는 요소들을 강제 결합(문자형 데이터를 갖고 있는 숫자 예시 - "1000")
+var $eval=eval("1000*2000");
+console.log($eval); // 2000000
